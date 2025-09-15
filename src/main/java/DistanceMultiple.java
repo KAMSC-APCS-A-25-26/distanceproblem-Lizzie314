@@ -46,7 +46,6 @@ public class DistanceMultiple {
             System.out.print("\nEnter two coordinate pairs: ");
 
             // Store the inputs and separate out unwanted parts
-            String[] pairs = scanner.nextLine().replaceAll("[()]", " ").split("  ");
             String[] pairs = scanner.nextLine().replaceAll("[()]", " ").split(" {2}");
 
             // Take out commas
