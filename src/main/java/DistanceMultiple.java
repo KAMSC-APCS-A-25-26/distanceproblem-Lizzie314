@@ -47,6 +47,7 @@ public class DistanceMultiple {
 
             // Store the inputs and separate out unwanted parts
             String[] pairs = scanner.nextLine().replaceAll("[()]", " ").split("  ");
+            String[] pairs = scanner.nextLine().replaceAll("[()]", " ").split(" {2}");
 
             // Take out commas
             String[] set1 = pairs[0].split(",");
