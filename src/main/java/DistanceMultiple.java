@@ -29,7 +29,6 @@
 
 import java.util.Scanner;
 
-
 public class DistanceMultiple {
     public static void main(String[] args) {
         // Create scanner classes
@@ -40,15 +39,20 @@ public class DistanceMultiple {
         System.out.print("\nHow many times would you like to run the program?  ");
 
         int numRuns = inputScanner.nextInt();
-        for(int j = 0; j < numRuns; j++)
+
+        for (int j = 0; j < numRuns; j++)
         {
             // Prompt the user for the coordinate pairs
             System.out.print("\nEnter two coordinate pairs: ");
+            String coordinates = scanner.nextLine();
 
-            // Store the inputs and separate out unwanted parts
-            String[] pairs = scanner.nextLine().replaceAll("[()]", " ").split(" {2}");
+            // Remove parentheses
+            coordinates = coordinates.substring(1, coordinates.length() - 1);
 
-            // Take out commas
+            // Split each of the points by the middle ( and )
+            String[] pairs = coordinates.split("\\)\\(");
+
+            // Split by commas
             String[] set1 = pairs[0].split(",");
             String[] set2 = pairs[1].split(",");
 
@@ -64,11 +68,8 @@ public class DistanceMultiple {
             // Output distance
             System.out.print("\nDistance: " + distance + "\n");
         }
-
         // Exit the program
         System.out.print("\n\n\n");
         return;
-
     }
-
 }
