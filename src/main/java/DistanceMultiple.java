@@ -27,18 +27,17 @@
  */
 
 
-import java.util.Scanner;     
+import java.util.Scanner;
 
 public class DistanceMultiple {
     public static void main(String[] args) {
         // Create scanner classes
         Scanner scanner = new Scanner(System.in);
-        Scanner inputScanner = new Scanner(System.in);
 
         // Prompt the user for the number of runs
         System.out.print("\nHow many times would you like to run the program?  ");
 
-        int numRuns = inputScanner.nextInt();
+        int numRuns = scanner.nextInt();
 
         for (int j = 0; j < numRuns; j++)
         {
