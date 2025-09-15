@@ -70,6 +70,6 @@ public class DistanceMultiple {
         }
         // Exit the program
         System.out.print("\n\n\n");
-        return;
+        return;    
     }
 }
